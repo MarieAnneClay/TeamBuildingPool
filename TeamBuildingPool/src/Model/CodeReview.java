@@ -1,4 +1,5 @@
 package Model;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CodeReview {
@@ -11,11 +12,11 @@ public class CodeReview {
 	public CodeReview() {
 	}
 	
-	public CodeReview(String n, String des, Date dat, CRClass c ) {
-		name=n;
-		description=des;
-		datetime=dat;
-		crclass=c;
+	public CodeReview(String name, String description, Date datetime, CRClass crclass ) {
+		this.name=name;
+		this.description=description;
+		this.datetime=datetime;
+		this.crclass=crclass;
 	}
 	
 	public String getName() {
@@ -30,8 +31,8 @@ public class CodeReview {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Date getDatetime() {
-		return datetime;
+	public String getDatetime() {
+		return new SimpleDateFormat("dd/mm/yyyy").format(datetime);
 	}
 	public void setDatetime(Date datetime) {
 		this.datetime = datetime;

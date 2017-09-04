@@ -10,17 +10,17 @@ public class Member {
 	public Member() {
 	}
 	
-	public Member(String n, String e, Date b) {
-		name=n;
-		email=e;
-		birthdate=b;
+	public Member(String name, String email, Date birthdate) {
+		this.name=name;
+		this.email=email;
+		this.birthdate=birthdate;
 	}
 	
-	public Member(String n, String e, Date b, CRClass c) {
-		name=n;
-		email=e;
-		birthdate=b;
-		crclass=c;
+	public Member(String name, String email, Date birthdate, CRClass crclass) {
+		this.name=name;
+		this.email=email;
+		this.birthdate=birthdate;
+		this.crclass=crclass;
 	}
 	
 	public String getName() {

@@ -7,15 +7,17 @@ public class CRClass {
 	private Vector<Member> members;
 	
 	public CRClass() {
+		this.members=new Vector<Member>();
 	}
 	
-	public CRClass(String n) {
-		name=n;
+	public CRClass(String name) {
+		this.name=name;
+		this.members=new Vector<Member>();
 	}
 	
-	public CRClass(String n, Vector<Member> m) {
-		name=n;
-		members=m;
+	public CRClass(String name, Vector<Member> members) {
+		this.name=name;
+		this.members=members;
 	}
 	
 	public String getName() {
@@ -30,20 +32,20 @@ public class CRClass {
 		return members;
 	}
 	
-	public boolean addMember(Member m) {
-		return members.add(m);
+	public boolean addMember(Member member) {
+		return members.add(member);
 	}
 	
-	public boolean addMember(Vector<Member> m) {
-		return members.addAll(m);
+	public boolean addMember(Vector<Member> member) {
+		return members.addAll(member);
 	}
 	
-	public boolean deleteMember(Member m) {
-		return members.remove(m);
+	public boolean deleteMember(Member member) {
+		return members.remove(member);
 	}
 	
-	public Member deleteMember(int i) {
-		return members.remove(i);
+	public Member deleteMember(int index) {
+		return members.remove(index);
 	}
 	
 }
