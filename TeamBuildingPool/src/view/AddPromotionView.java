@@ -28,7 +28,7 @@ public class AddPromotionView extends HttpServlet{
     		mainController.getClasses().add(new CRClass(name));
     	} catch (Exception e) {
     		
-    	}
+    	} 
     	
     	request.setAttribute("result", name);
     	this.getServletContext().getRequestDispatcher(View).forward(request, response );
