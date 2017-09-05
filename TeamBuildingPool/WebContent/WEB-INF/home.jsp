@@ -154,7 +154,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-												<c:forEach items="${controller.members}" var="m">
+												<c:forEach items="${currentMembers}" var="m">
 													<tr>
 													    <td><c:out value="${m.name}" /></td>
 													    <td><c:out value="${m.email}" /></td>
@@ -169,9 +169,13 @@
                                         </table>
                                         <div class="text-center">
                                             <ul class="pagination">
-                                           		<c:forEach var="i" begin="1" end="${controller.members.size()}" step="7">
-                                           			<fmt:formatNumber value="${1+i/7 }" var="pageNumber" maxFractionDigits="0"/>
-                                           			<li><a href="#">${pageNumber}</a></li>
+                                           		<c:forEach var="i" begin="1" end="${memberTotalPages}">
+                                           			<li><a href="
+                                           				<c:url value="/home">
+                                           					<c:param name="memberPage" value="${i}"/>	
+                                           				</c:url>">
+                                           				${i}
+                                           			</a></li>
                                            		</c:forEach>
                                             </ul>
                                         </div>

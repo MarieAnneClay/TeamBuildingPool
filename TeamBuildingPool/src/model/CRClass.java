@@ -1,4 +1,4 @@
-package Model;
+package model;
 import java.util.Vector;
 
 public class CRClass {

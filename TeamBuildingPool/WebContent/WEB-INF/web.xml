@@ -15,7 +15,7 @@
 
 	<servlet>
 	    <servlet-name>HomeView</servlet-name>
-	    <servlet-class>View.HomeView</servlet-class>
+	    <servlet-class>view.HomeView</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
