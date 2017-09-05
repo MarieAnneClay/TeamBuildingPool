@@ -22,5 +22,15 @@
 	    <servlet-name>HomeView</servlet-name>
 	    <url-pattern>/home</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AddPromotionView</servlet-name>
+	    <servlet-class>view.AddPromotionView</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>AddPromotionView</servlet-name>
+	    <url-pattern>/add_promotion</url-pattern>
+	</servlet-mapping>
 
 </web-app>

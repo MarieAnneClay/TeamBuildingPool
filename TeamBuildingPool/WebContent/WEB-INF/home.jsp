@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">When Is My Code Review?</a>
+                <a class="navbar-brand" href="<c:url value="/home" />">When Is My Code Review?</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -44,7 +44,7 @@
                         <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="add_promotion.html"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                        <li><a href="<c:url value="/add_promotion"/>"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                         </li>
                         <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                         </li>
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="add_promotion.html">
+                        <a href="<c:url value="/add_promotion" />">
                             <div class="panel-footer">
                                 <span class="pull-left">Ajouter une promotion</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
