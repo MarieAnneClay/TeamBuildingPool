@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fr">
@@ -169,9 +169,10 @@
                                         </table>
                                         <div class="text-center">
                                             <ul class="pagination">
-                                                <li><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
+                                           		<c:forEach var="i" begin="1" end="${controller.members.size()}" step="7">
+                                           			<fmt:formatNumber value="${1+i/7 }" var="pageNumber" maxFractionDigits="0"/>
+                                           			<li><a href="#">${pageNumber}</a></li>
+                                           		</c:forEach>
                                             </ul>
                                         </div>
                                     </div>

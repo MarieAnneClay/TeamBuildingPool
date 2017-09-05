@@ -17,22 +17,6 @@ public class HomeView extends HttpServlet{
 	private static MainController mainController=null;
 	
 	public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException{
-//		String paramAuteur = request.getParameter( "auteur" );
-//		String message = "Transmission de variables : OK ! "+paramAuteur;
-//	    
-//		Member m = new Member();
-//		m.setName("Bob");
-//		
-//		List<Integer> premiereListe = new ArrayList<Integer>();
-//		premiereListe.add( 27 );
-//		premiereListe.add( 12 );
-//		premiereListe.add( 138 );
-//		premiereListe.add( 6 );
-//		
-//		request.setAttribute( "test", message );
-//		request.setAttribute("member", m);
-//		request.setAttribute( "liste", premiereListe );
-		
 		if (mainController==null) {
 			try {
 				mainController=new MainController();
@@ -45,6 +29,4 @@ public class HomeView extends HttpServlet{
 		
 		this.getServletContext().getRequestDispatcher( "/WEB-INF/home.jsp" ).forward( request, response );
     }
-	
-	
 }
