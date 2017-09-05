@@ -26,7 +26,7 @@ public class CodeReview implements Serializable {
 	private String description;
 
 	private String name;
-	@OneToOne @MapsId
+	@PrimaryKeyJoinColumn
 	private CRClass crclass;
 
 	public CodeReview() {

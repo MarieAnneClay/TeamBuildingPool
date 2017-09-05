@@ -28,10 +28,10 @@ public class Member implements Serializable {
 	private int crclassId;
 
 	private String email;
-
+	@Column (name="name")
 	private String name;
 	
-	@OneToOne @MapsId
+	@PrimaryKeyJoinColumn
 	private CRClass crclass;
 
 	public Member() {
