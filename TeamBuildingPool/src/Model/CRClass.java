@@ -1,6 +1,7 @@
 package Model;
 import java.util.Vector;
 
+
 public class CRClass {
 
 	private String name;
