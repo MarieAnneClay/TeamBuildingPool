@@ -5,15 +5,32 @@
  	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
 
 	<servlet>
 	    <servlet-name>HomeView</servlet-name>
-	    <servlet-class>View.HomeView</servlet-class>
+	    <servlet-class>view.HomeView</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
 	    <servlet-name>HomeView</servlet-name>
 	    <url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AddPromotionView</servlet-name>
+	    <servlet-class>view.AddPromotionView</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>AddPromotionView</servlet-name>
+	    <url-pattern>/add_promotion</url-pattern>
 	</servlet-mapping>
 
 </web-app>
