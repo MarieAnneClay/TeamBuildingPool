@@ -45,9 +45,9 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="<c:url value="/add_promotion"/>"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                         </li>
-                        <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                        <li><a href="<c:url value="/add_member"/>"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                         </li>
-                        <li><a href="add_event.html"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                        <li><a href="<c:url value="/add_event"/>"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                         </li>
                     </ul>
                 </li>
@@ -74,14 +74,14 @@
                                             <label for="name">Nom</label>
                                             <input type="text" class="input-lg form-control" id="className" name="className" placeholder="Nom">
                                         </div>
-										<p style="color:green">
-                                        	<c:if test="${not empty result }">
-												<c:out value="Promotion \"${result }\" crée"/>	                                        	
-                                        	</c:if>
-                                        </p>
                                         <div class="text-right">
                                             <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
                                         </div>
+                                        <p style="${error ? "color:red" : "color:green"}">
+                                        	<c:if test="${not empty result }">
+												<c:out value="${result }"/>	                                        	
+                                        	</c:if>
+                                        </p>
                                         
                                     </form>
                                 </div>

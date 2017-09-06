@@ -1,22 +1,21 @@
 package model;
-import java.util.Date;
 
 public class Member {
 	private String name;
 	private String email;
-	private Date birthdate;
+	private String birthdate;
 	private CRClass crclass; 
 	
 	public Member() {
 	}
 	
-	public Member(String name, String email, Date birthdate) {
+	public Member(String name, String email, String birthdate) {
 		this.name=name;
 		this.email=email;
 		this.birthdate=birthdate;
 	}
 	
-	public Member(String name, String email, Date birthdate, CRClass crclass) {
+	public Member(String name, String email, String birthdate, CRClass crclass) {
 		this.name=name;
 		this.email=email;
 		this.birthdate=birthdate;
@@ -39,11 +38,11 @@ public class Member {
 		this.email = email;
 	}
 
-	public Date getBirthdate() {
+	public String getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(Date birthdate) {
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
 

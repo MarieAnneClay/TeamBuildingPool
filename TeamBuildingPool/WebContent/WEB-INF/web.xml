@@ -32,5 +32,25 @@
 	    <servlet-name>AddPromotionView</servlet-name>
 	    <url-pattern>/add_promotion</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AddMemberView</servlet-name>
+	    <servlet-class>view.AddMemberView</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>AddMemberView</servlet-name>
+	    <url-pattern>/add_member</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AddEventView</servlet-name>
+	    <servlet-class>view.AddEventView</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>AddEventView</servlet-name>
+	    <url-pattern>/add_event</url-pattern>
+	</servlet-mapping>
 
 </web-app>

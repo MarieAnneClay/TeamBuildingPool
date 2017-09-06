@@ -1,18 +1,16 @@
 package model;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class CodeReview {
 	
 	private String name;
 	private String description;
-	private Date datetime;
+	private String datetime;
 	private CRClass crclass;
 	
 	public CodeReview() {
 	}
 	
-	public CodeReview(String name, String description, Date datetime, CRClass crclass ) {
+	public CodeReview(String name, String description, String datetime, CRClass crclass ) {
 		this.name=name;
 		this.description=description;
 		this.datetime=datetime;
@@ -32,9 +30,9 @@ public class CodeReview {
 		this.description = description;
 	}
 	public String getDatetime() {
-		return new SimpleDateFormat("dd/mm/yyyy").format(datetime);
+		return datetime;
 	}
-	public void setDatetime(Date datetime) {
+	public void setDatetime(String datetime) {
 		this.datetime = datetime;
 	}
 	public CRClass getCrclass() {
