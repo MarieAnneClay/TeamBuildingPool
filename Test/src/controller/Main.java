@@ -39,9 +39,13 @@ public class Main {
         }
 		Member member = new Member();
 		member = members.get(6);
-		member.setName("YOLO");
-		member.setEmail("YOLO");
+		member.setName("COUCOU");
+		member.setEmail("COUCOU");
 		updateMember(member, em);
+		
+		for (Member todo : members) {
+            System.out.println(todo.getName());
+        }
 
         em.close();
     }
