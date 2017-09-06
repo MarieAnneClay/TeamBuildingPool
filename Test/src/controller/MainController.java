@@ -21,10 +21,25 @@ public class MainController {
 	// Pour établir la connexion avec la BDD
 	private static final String PERSISTENCE_UNIT_NAME = "Test";
     private static EntityManagerFactory factory;
+    private static EntityManager em;
+    
+  //implémentation du singleton
+  	/** Holder */
+  	private static class SingletonHolder
+  	{		
+  		/** Instance unique non préinitialisée */
+  			private final static MainController instance=new MainController();
+  	}
+   
+  	/** Point d'accès pour l'instance unique du singleton */
+  	public static MainController getInstance()
+  	{
+  		return SingletonHolder.instance;
+  }
 	
 	public MainController() throws ParseException {
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-        EntityManager em = factory.createEntityManager();
+        em = factory.createEntityManager();
         
 		// Remplit les listes avec les infos de la BDD
         members = this.getMembers(em);
@@ -114,6 +129,15 @@ public class MainController {
 		em.getTransaction().commit();
 		return result;
 	}
+	
+	public Vector<Member> getMemberSubest(int start, int size) {
+		Vector<Member> ret = new Vector<Member>();
+		for (int i=start; i<start+size; i++) {
+			if (i>=members.size()) break;
+			ret.add(members.get(i));
+		}
+		return ret;
+}
 
 	/* CLASS */
 	public Vector<CRClass> getClasses(EntityManager em) {
